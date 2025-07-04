@@ -76,6 +76,7 @@
     "@size-limit/webpack-why": "^11.1.6",
     "@svgr/cli": "^8.0.0",
     "@testing-library/react": "^16.0.0",
+    "@types/node": "^24.0.10",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^4.3.2",
