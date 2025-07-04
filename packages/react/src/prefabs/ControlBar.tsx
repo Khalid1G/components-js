@@ -12,6 +12,7 @@ import { supportsScreenSharing } from '@livekit/components-core';
 import { mergeProps } from '../utils';
 import { StartMediaButton } from '../components/controls/StartMediaButton';
 import { SettingsMenuToggle } from '../components/controls/SettingsMenuToggle';
+import { PushToTalkButton } from '../components/controls/PushToTalkButton';
 
 /** @public */
 export type ControlBarControls = {
@@ -220,6 +221,12 @@ export function ControlBar({
           {showIcon && <LeaveIcon />}
           {showText && 'Leave'}
         </DisconnectButton>
+      )}
+
+
+
+      {visibleControls.leave && (
+      <PushToTalkButton/>
       )}
       <StartMediaButton />
     </div>
