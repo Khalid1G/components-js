@@ -294,6 +294,7 @@ export function PushToTalkButton() {
       onTouchEnd={handleTouchEnd}
       onTouchCancel={handleTouchCancel}
       disabled={isLoading}
+      style={{ backgroundColor: getButtonColor() }}
     >
       {getButtonText()}
     </button>
