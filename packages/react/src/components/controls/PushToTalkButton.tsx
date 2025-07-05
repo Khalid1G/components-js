@@ -207,7 +207,7 @@ export function PushToTalkButton() {
   useEffect(() => {
     return () => {
       if (isPressed) {
-        endTurn("end_turn");
+        void endTurn("end_turn");
       }
 
       if (rpcTimeoutRef.current) {
@@ -248,6 +248,7 @@ export function PushToTalkButton() {
         window.removeEventListener("touchend", handleGlobalTouchEnd);
       };
     }
+    return undefined;
   }, [isPressed, handleMouseUp, handleTouchEnd]);
 
   // prevent context menu (long press) on touch devices
@@ -262,6 +263,7 @@ export function PushToTalkButton() {
         }
       };
     }
+    return undefined;
   }, []);
 
   if (!agent) return null;
